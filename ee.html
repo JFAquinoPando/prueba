@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Personalizada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el contenedor de la lista */
+        
+        .custom-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: custom-counter;
+            /* Inicializar contador */
+        }
+        /* Estilos para cada elemento de la lista */
+        
+        .custom-list li {
+            background-color: #f0f0f0;
+            /* Ajusta el color de fondo */
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding-left: 60px;
+            /* Espacio para el número */
+        }
+        /* Estilos para los números */
+        
+        .custom-list li::before {
+            content: counter(custom-counter);
+            counter-increment: custom-counter;
+            background-color: #0056b3;
+            /* Color de fondo del número */
+            color: #fff;
+            /* Color del texto del número */
+            font-size: 24px;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        /* Estilos para el texto resaltado */
+        
+        .highlight {
+            font-family: 'Arial, sans-serif';
+            color: #333;
+            line-height: 1.5;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <ol class="custom-list">
+        <li>
+            <p class="highlight">LOS PRODUCTORES O IMPORTADORES DE BIENES como MOBILIARIO DE OFICINA, BEBIDAS, AUTOPARTES PARA VEHÍCULOS, OBRAS DE ARTE deben conocer muy bien a sus compradores. Por su parte, los comercializadores de estos bienes deben... </p>
+        </li>
+        <li>
+            <p class="highlight">Al establecer RELACIONES COMERCIALES CON NUEVOS CLIENTES, es importante evaluar su ACTIVIDAD ECONÓMICA, EXPERIENCIA Y ANTECEDENTES. Identificar actividades o comportamientos que sean inusuales.</p>
+        </li>
+        <li>
+            <p class="highlight">Cuando se trate de CONTRATAR A NUEVOS PROVEEDORES, asegúrese de obtener información sobre SUS ANTECEDENTES, EXPERIENCIA EN EL SECTOR Y REFERENCIAS de otras empresas que hayan trabajado con este.</p>
+        </li>
+        <li>
+            <p class="highlight">ATENCIÓN A DIFERENTES SEÑALES DE ALERTA que podrían indicar irregularidades, como crecimiento de CLIENTES POR ENCIMA DEL PROMEDIO Y CONSIDERABLEMENTE MAYOR AL PROMEDIO DEL MERCADO; empresas con alta rotación de inventario sin una razón aparente
+                o capacidad instalada.</p>
+        </li>
+    </ol>
+</body>
+
+</html>

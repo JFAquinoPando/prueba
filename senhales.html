@@ -283,57 +283,57 @@
                         <img src="./img/Seprelad_Imagenes_Plataforma_Ciclo Lavado de activos.png" alt="">
                     </div>
                 </div>
-                <div class="consejo-prevencion container">
+                <div class="consejo-prevencion cxontainer">
                     <div class="left">
                         <img src="./img/consejos.png" alt="consejos" class="imagen-100">
 
                     </div>
-                    <div class="consejos right">
+                    <div class="consejos right custom-list">
                         <ol>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     Los productores o importadores de bienes como electrodomesticos, ropa, textiles, articulos de cuero, mobilario de oficina, bebidas, autopartes para vehiculos u otros, ademas de bienes de lujo como joyas u obras de arte deben conocer muy bien a sus compradores
                                     y en lo posible, el uso que le daran a estos.
                                 </p>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     Por su parte, los comercializadores de estos bienes deben garantizar que sus proveedores cumplen con todos los requisitos legales.
                                 </p>
                             </li>
                             <li>
-                                <p>Al establecer relaciones comerciales con nuevos clientes es importante conocer informacion clara sobre la actividad economica, experiencia y antecedentes. Igualmente, se debe estar atento a posibles situaciones o solicitudes
+                                <p class="fuente-gotham-light">Al establecer relaciones comerciales con nuevos clientes es importante conocer informacion clara sobre la actividad economica, experiencia y antecedentes. Igualmente, se debe estar atento a posibles situaciones o solicitudes
                                     que sean inusuales.</p>
                             </li>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     Cuando se trate de contratar a nuevos proveedores, antes de hacerlo se debe consultar y tener conocimiento sobre sus antecedentes, experiencia en el sector y referencias de otras empresas o entidades que hayan trabajado con este.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     Atencion a diferentes se&ntilde;ales de alerta que podrian indicar un posible caso de lavado de activos, por ejemplo: Compras de clientes por encima del promedio y considerado como normal; venta de productos por debajo del promedio del mercado; empresas
                                     con alta rotacion de inventario y esto no coincide con su nivel de ventas y capacidad instalada.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     las organizaciones deben contar y desarrollar politicas relacionadas con devolucion de dinero por mercancia, manejo de divisas, emision de titulos y manejo de valores y politica de inversiones y compras. Todas estas les serviran para evitar posibles casos
                                     de lavado de dinero por parte de organizaciones criminales.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     Finalmente, es clave capacitar y concientizar a todo el personal de la empresa sobre el riesgo de lavado de activos y que tengan la informacion y el conocimiento necesario que les permita identificar y alertar sobre irregularidades u operaciones inusuales
                                     que pueden poner en riesgo a la empresa e impactar negativamente en su reputacion.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     como ciudadano la mejor manera de contribuir con el pais para su crecimiento economico es exigiendo factura en cada compra que realiza. De no solicitar factura al vendedor se queda con el impuesto, es decir, no se lo paga al Estado. Con lo cual el pais
                                     se queda con menos recursos para la seguridad, educacion y salud.
                                 </p>
                             </li>
                             <li>
-                                <p>
+                                <p class="fuente-gotham-light">
                                     no adquirir productos falsificados, porque debilita a las industrias, genera perdidas financieras, afecta las fuentes de empleo, fomenta la delicuencia y el crimen organizado y nos da&ntilde;a como sociedad.
                                 </p>
                             </li>
@@ -342,14 +342,54 @@
                 </div>
                 <div class="contenedor-gris">
                     <div class="container">
-                        <p>Esta atento ante las se&ntilde;ales y practicas sospechosas en tu entorno. Informate y ponete en contacto con las autoridades competentes. Con tus reportes y denuncias aumentamos el conocimiento y tenemos mas posibilidades de identificar
+                        <p class="text-center">Esta atento ante las se&ntilde;ales y practicas sospechosas en tu entorno. Informate y ponete en contacto con las autoridades competentes. Con tus reportes y denuncias aumentamos el conocimiento y tenemos mas posibilidades de identificar
                             este crimen que invade nuestra sociedad.</p>
-                        <h3 class="text-center">Reporta las actividades sospechas aqui</h3>
+                        <h3 class="text-center texto-rojo texto-2em senhales-header__texto--bold">Reporta las actividades sospechas aqui</h3>
                         <div class="botones">
-                            <button class="boton boton--rojo">Sujetos obligados</button>
-                            <button class="boton boton--azul">Publico en general</button>
+                            <div>
+                                <button class="boton boton--rojo">Sujetos obligados</button>
+                                <span>Empresas, Organizaciones, Asociaciones, etc.</span>
+                            </div>
+                            <div>
+                                <button class="boton boton--azul">Publico en general</button>
+                                <span>Persona física, Individuos</span>
+                            </div>
                         </div>
                     </div>
+                    <dialog class="modal-1">
+                        <form method="dialog">
+                            <div class="envio-reporte" action="mailto:seprelad@seprelad.gov.py" method="post" enctype="text/plain">
+                                <div class="form-group">
+                                    <label for="to">Para:</label>
+                                    <input type="email" id="to" name="to" value="seprelad@seprelad.gov.py" readonly="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">ASUNTO:</label>
+                                    <input type="text" id="subject" name="subject" value="SOSPECHA DE ACTIVIDADES CRIMINALES" readonly="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Escriba brevemente su reporte y adjunte las pruebas documentales al concluir la redacción</label>
+                                    <textarea id="message" name="message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="attachment">Adjuntar documento</label>
+                                    <input type="file" id="attachment" name="attachment">
+                                </div>
+                                <button type="submit" class="btn">ENVIAR</button>
+                            </div>
+                            <button type="submit">Cerrar</button>
+                        </form>
+                    </dialog>
+                    <dialog class="modal-2">
+                        <form method="dialog">
+                            <h3>Ministerio Publico</h3>
+                            <h3>Chile y Eduardo V. Haedo</h3>
+                            <h3>Asunción, Paraguay</h3>
+                            <h3><span>Tel:</span> +595 21 452 639/41</h3>
+                            <h3><span>Email:</span> comunicaciones@ministeriopublico.gov.py</h3>
+                            <button type="submit">Cerrar</button>
+                        </form>
+                    </dialog>
                 </div>
             </div>
         </section>
@@ -536,7 +576,18 @@
         </footer>
         <!-- #footer end -->
     </div>
-
+    <script>
+        const boton1 = document.querySelector(".botones .boton--rojo")
+        const boton2 = document.querySelector(".botones .boton--azul")
+        boton1.addEventListener("click", () => {
+            const dialogo = document.querySelector(".modal-1")
+            dialogo.showModal()
+        })
+        boton2.addEventListener("click", () => {
+            const dialogo = document.querySelector(".modal-2")
+            dialogo.showModal()
+        })
+    </script>
 
 </body>
 

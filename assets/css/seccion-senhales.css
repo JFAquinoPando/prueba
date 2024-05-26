@@ -17,26 +17,25 @@
 @font-face {
     font-family: 'Gotham Rounded';
     src: url('../../tipografias/GothamRoundedLight_21020.ttf') format('truetype');
-    font-weight: normal;
+    /* font-weight: normal; */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gotham Rounded Medium';
     src: url('../../tipografias/GothamRoundedMedium_21022.ttf') format('truetype');
-    font-weight: normal;
+    /* font-weight: normal; */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gotham Rounded Bold';
     src: url('../../tipografias/GothamRoundedBold_21016.ttf') format('truetype');
-    font-weight: normal;
+    /* font-weight: normal; */
     font-style: normal;
 }
 
-.fuente-gotham,
-.fuente-gotham * {
+.fuente-gotham {
     font-family: "Gotham Rounded Medium", "Times New Roman", Times, serif !important;
     font-weight: 500;
 }
@@ -46,7 +45,7 @@
 }
 
 .fuente-gotham-light--bold {
-    font-family: "Gotham Rounded", "Times New Roman", Times, serif !important;
+    font-family: "Gotham Rounded Bold", "Times New Roman", Times, serif !important;
     font-weight: bold;
 }
 
@@ -71,12 +70,12 @@
     font-size: 3em;
     text-transform: uppercase;
     color: var(--rojo);
-    font-family: 'Gotham Rounded';
+    /* font-family: 'Gotham Rounded'; */
 }
 
 .senhales-header__texto--bold {
     font-weight: bold;
-    font-family: 'Gotham Rounded Bold', sans-serif !important;
+    /* font-family: 'Gotham Rounded Bold', sans-serif !important; */
     font-weight: 600 !important;
 }
 
@@ -197,6 +196,14 @@ body {
     color: white;
 }
 
+.texto-rojo {
+    color: var(--rojo);
+}
+
+.texto-2em {
+    font-size: 2em;
+}
+
 .banner-operaciones {
     display: flex;
     align-items: center;
@@ -254,6 +261,7 @@ body {
 
 .left {
     flex: 0 0 30%;
+    padding: 40px;
     /* No crecer, no encoger, ocupar el 30% */
 }
 
@@ -264,4 +272,127 @@ body {
 
 .imagen-100 {
     width: 100%;
+}
+
+.consejos ol li:nth-child(2n+1) {}
+
+
+/* Custom li */
+
+
+/* Estilos para el contenedor de la lista */
+
+.custom-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: custom-counter;
+    /* Inicializar contador */
+}
+
+
+/* Estilos para cada elemento de la lista */
+
+.consejos ol li:nth-child(2n+1) {
+    background-color: #f0f0f0;
+}
+
+.custom-list li {
+    /* Ajusta el color de fondo */
+    padding: 20px;
+    margin: 10px 0;
+    /* border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+    /* Espacio para el número */
+}
+
+
+/* Estilos para los números */
+
+.custom-list li::before {
+    content: counter(custom-counter);
+    counter-increment: custom-counter;
+    background-color: #0056b3;
+    /*Colordefondodelnúmero*/
+    color: #fff;
+    /*Colordeltextodelnúmero*/
+    font-size: 24px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 10%;
+}
+
+
+/* Estilos para el texto resaltado */
+
+.custom-list li p {
+    font-family: 'Arial, sans-serif';
+    color: #333;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.custom-list ol {
+    list-style: none !important;
+}
+
+dialog::backdrop {
+    background-color: #b9b9b9;
+    opacity: .8;
+    backdrop-filter: blur(4px);
+}
+
+.envio-reporte {
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    textarea {
+        height: 150px;
+        resize: vertical;
+    }
+    input[type="file"] {
+        display: block;
+        margin-top: 10px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #28a745;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #218838;
+    }
+}
+
+.botones>div {
+    width: min-content;
+    text-align: center;
 }

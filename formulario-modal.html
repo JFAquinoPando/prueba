@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        dialog::backdrop {
+            background-color: black;
+            opacity: .8;
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Otro</h1>
+    <button class="mostrar-1">Modal 1</button>
+    <button class="mostrar-2">Modal 2</button>
+    <dialog class="modal-1">
+        <form method="dialog">
+            <h3>Es un lindo dialogo</h3>
+            <button type="submit">Cerrar</button>
+        </form>
+    </dialog>
+    <dialog class="modal-2">
+        <form method="dialog">
+            <h3>Es un X dialogo</h3>
+            <button type="submit">Cerrar</button>
+        </form>
+    </dialog>
+    <script>
+        const boton1 = document.querySelector(".mostrar-1")
+        const boton2 = document.querySelector(".mostrar-2")
+        boton1.addEventListener("click", () => {
+            const dialogo = document.querySelector(".modal-1")
+            dialogo.showModal()
+        })
+        boton2.addEventListener("click", () => {
+            const dialogo = document.querySelector(".modal-2")
+            dialogo.showModal()
+        })
+    </script>
+</body>
+
+</html>
