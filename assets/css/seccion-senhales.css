@@ -5,6 +5,10 @@
     --negro: #000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .content-wrap1.notoppadding {
     color: var(--negro);
 }
@@ -403,6 +407,12 @@ dialog::backdrop {
 .botones>div {
     width: min-content;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: space-around;
+    align-items: initial;
+    height: 100px;
 }
 
 .contenedor-gris {
@@ -491,6 +501,17 @@ label[for="attachment"] {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+dialog:not([open]) {
+    visibility: hidden;
+}
+
+#senhales,
+#como-nos-afecta,
+#consejos-de-prevencion,
+#denuncias-y-reportes {
+    margin-block: 3em;
 }
 
 
