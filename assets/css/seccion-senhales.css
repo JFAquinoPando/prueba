@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body.stretched.device-lg {
+    overflow-x: hidden;
+}
+
 .content-wrap1.notoppadding {
     color: var(--negro);
 }
@@ -133,6 +137,10 @@ body {
     -o-border-radius: 25px;
 }
 
+.boton:not([href="#senhales"]) {
+    line-height: 50px;
+}
+
 .boton:hover {
     cursor: pointer;
 }
@@ -175,6 +183,7 @@ body {
 .caja-de-texto {
     margin-top: 2em;
     background-color: #f4f4f4;
+    padding-block: 2em;
 }
 
 .caja-de-texto .container {
@@ -211,6 +220,10 @@ body {
     color: var(--rojo);
 }
 
+.texto-negro {
+    color: var(--negro);
+}
+
 .texto-2em {
     font-size: 2em;
 }
@@ -241,6 +254,7 @@ body {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-top: 2em;
 }
 
 .contenedor-sucede.container::after,
@@ -351,7 +365,7 @@ body {
     font-family: 'Arial, sans-serif';
     /* color: #333; */
     line-height: 1.5;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 .custom-list ol {
@@ -411,8 +425,9 @@ dialog::backdrop {
     flex-direction: column;
     justify-content: start;
     align-content: space-around;
-    align-items: initial;
+    align-items: center;
     height: 100px;
+    gap: 0.4em;
 }
 
 .contenedor-gris {
@@ -512,6 +527,27 @@ dialog:not([open]) {
 #consejos-de-prevencion,
 #denuncias-y-reportes {
     margin-block: 3em;
+}
+
+#senhales {
+    margin-top: 0;
+}
+
+#como-nos-afecta {
+    margin-bottom: 0;
+}
+
+.span-10ch {
+    display: inline-block;
+    width: 10ch;
+}
+
+.pb-2 {
+    padding-bottom: 2em;
+}
+
+.px-2 {
+    padding-block: 2em;
 }
 
 

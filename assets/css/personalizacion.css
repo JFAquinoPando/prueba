@@ -1073,7 +1073,7 @@ body:not(.top-search-open) #primary-menu>.container>ul {
 
 #content {
     position: relative;
-    overflow: hidden;
+    /* overflow-x: hidden; */
     background-color: #FFF;
 }
 
