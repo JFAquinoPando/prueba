@@ -1,6 +1,12 @@
 :root {
     --rojo: #EA2428;
     --verde: #6bf575;
+    --fondo-gris: #f4f4f4;
+    --negro: #000;
+}
+
+.content-wrap1.notoppadding {
+    color: var(--negro);
 }
 
 .boton-ver-las-senhales img {
@@ -54,7 +60,7 @@
 }
 
 .senhales-header__imagen {
-    width: 200px;
+    width: 150px;
 }
 
 .senhales-header {
@@ -106,7 +112,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .boton {
@@ -176,11 +182,12 @@ body {
     display: flex;
     align-content: center;
     align-items: center;
+    padding: 40px 80px;
 }
 
 .contenedor-flex {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
 .contenedor-flex img {
@@ -211,7 +218,8 @@ body {
 }
 
 .banner-operaciones img {
-    width: 160px;
+    width: 100px;
+    transform: translateX(12px);
 }
 
 .banner-operaciones p {
@@ -261,7 +269,7 @@ body {
 
 .left {
     flex: 0 0 30%;
-    padding: 40px;
+    padding: 40px 80px;
     /* No crecer, no encoger, ocupar el 30% */
 }
 
@@ -337,7 +345,7 @@ body {
 
 .custom-list li p {
     font-family: 'Arial, sans-serif';
-    color: #333;
+    /* color: #333; */
     line-height: 1.5;
     font-size: 18px;
 }
@@ -347,8 +355,8 @@ body {
 }
 
 dialog::backdrop {
-    background-color: #b9b9b9;
-    opacity: .8;
+    background-color: #4d4d4dcf;
+    /* opacity: .8; */
     backdrop-filter: blur(4px);
 }
 
@@ -395,4 +403,127 @@ dialog::backdrop {
 .botones>div {
     width: min-content;
     text-align: center;
+}
+
+.contenedor-gris {
+    background-color: var(--fondo-gris);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.line-height-1 {
+    line-height: 1.2em;
+}
+
+.margin-0 {
+    margin: 0;
+}
+
+.modal-2,
+.modal-1 {
+    border: none;
+    width: max(800px, 50%);
+    height: min(600px, 80%);
+    display: flex;
+    align-items: center;
+    padding-inline: 50px;
+}
+
+:is(.modal-1,
+.modal-2) form[method="dialog"] {
+    width: 100%;
+}
+
+dialog form[method="dialog"]>button {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.font-1em {
+    font-size: 1.2em;
+}
+
+.font-2em {
+    font-size: 2em;
+}
+
+.w-max-content {
+    width: max-content;
+}
+
+.textarea-custom {
+    display: grid;
+    grid-template-areas: "req";
+}
+
+#message {
+    grid-area: req;
+    height: min(250px, 50vh);
+}
+
+.adjuntar {
+    grid-area: req;
+    align-self: end;
+    justify-self: end;
+}
+
+#attachment {
+    visibility: hidden;
+}
+
+.clip-imagen {
+    width: 60px;
+}
+
+.adjuntar-texto {
+    width: 10ch;
+    display: inline-block;
+}
+
+label[for="attachment"] {
+    display: block;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 767px) {
+    .botonera {
+        justify-content: center;
+    }
+    .senhales-header {
+        flex-direction: column-reverse;
+    }
+    .contenedor-sucede {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .botones {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .consejo-prevencion {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contenedor-verde {
+        flex-direction: column;
+    }
+    .ciclo-de-lavado .container {
+        width: 100% !important;
+    }
 }
