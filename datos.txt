@@ -1,0 +1,6 @@
+Tipografía: Gotham
+
+ROJO: #E52A26
+GRIS: #585856
+AZUL: #0A549A
+Color del cuadro: #F4F4F4
