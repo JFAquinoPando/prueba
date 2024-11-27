@@ -237,6 +237,100 @@
             font-weight: normal;
             font-style: normal;
         }
+
+
+        .contactos-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            justify-items: end;
+        }
+
+        .redes-sociales{
+            display: grid;
+            gap: 1em;
+            align-items: center;
+            justify-content: space-between;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: 768px){
+
+            .redes-sociales{
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .grilla-2-50porc{
+                grid-template-columns: 1fr !important;
+
+                article{
+                    max-width: calc(80% - 25px);
+                    *{
+                        word-break: break-word;
+                    }
+                }
+            }
+
+            section.columns-3-2{
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media screen and (max-width: 580px){
+            .grilla-2-50porc{
+                grid-template-columns: 1fr !important;
+
+                article{
+                    max-width: calc(80% - 25px);
+                    *{
+                        word-break: break-word;
+                    }
+                }
+            }
+
+            section.columns-3-2{
+                grid-template-columns: 1fr !important;
+            }
+
+            .grilla-4,.contactos-grid{
+                grid-template-columns: 1fr !important
+            }
+
+            .fondo-grisa.br-1em.padd-xy-1em{
+                width: 100%;
+                word-break: break-word;
+            }
+        }
+
+        article {
+            word-break: break-word;
+        }
+
+        @media screen and (min-width: 1200px){
+            .up-1200px{
+                display: block;
+            }
+            .down-1200px{
+                display: none;
+            }
+        }
+
+
+        @media screen and (max-width: 1199px){
+            .up-1200px{
+                display: none;
+            }
+            .down-1200px{
+                display: block;
+            }
+        }
+        
+        button.btn.btn-primary.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left {
+    background-color: crimson;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+}
     </style>
     <link rel="stylesheet" href="./assets/css/seccion-senhales.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gotham-fonts@1.0.3/css/gotham-rounded.min.css">
@@ -524,8 +618,10 @@
                         </li>
                     </ul> -->
                     <div class="grilla-4">
-                        <img src="./img/01.png" alt=""><img src="./img/02.png" alt=""><img src="./img/03.png"
-                            alt=""><img src="./img/04.png" alt="">
+                       <!--  <img src="./img/01.png" alt=""><img src="./img/02.png" alt=""><img src="./img/03.png"
+                            alt=""><img src="./img/04.png" alt=""> -->
+                            <img src="./img/mision.png" alt=""><img src="./img/vision.png" alt=""><img src="./img/valores.png"
+                            alt=""><img src="./img/proposito.png" alt="">
                     </div>
                 </div>
             </div>
@@ -550,32 +646,57 @@
                 <section class="page-section">
                     <div class="container">
 
-                        <section class=" grilla-4">
-                            <article class="fondo-grisa padd-xy-1em br-1em">
-                                <h4 class="title-12-em text-azul text-uppercase mb-0">dirección</h4>
-                                <span>
+                        <section class="contactos-grid">
+                            <img src="./img/direccion.png" alt="">
+                            <!-- <article class="fondo-grisa padd-xy-1em br-1em">
+                                <span style="height: 0px;">
                                     Federación Rusa y Augusto Roa Bastos
                                     - Sector Cultural BCP - Portón Nº 4
                                 </span>
-                            </article>
-                            <article class="fondo-grisa padd-xy-1em br-1em">
-                                <h4 class="title-12-em text-azul text-uppercase mb-0">teléfono</h4>
-                                <span>+595 21 600435
+                            </article> -->
+                            <img src="./img/TELEFFONO.png" alt="">
+                            <!-- <article class="fondo-grisa padd-xy-1em br-1em">
+                                <span  style="height: 0px;">+595 21 600435
                                 </span>
-                            </article>
-                            <article class="fondo-grisa padd-xy-1em br-1em">
-                                <h4 class="title-12-em text-azul text-uppercase mb-0">email</h4>
-                                consulta@seprelad.gov.py
-                            </article>
-                            <article class="fondo-grisa padd-xy-1em br-1em">
-                                <h4 class="title-12-em text-azul text-uppercase mb-0">horario</h4>
-                                <span>Lunes a Viernes: 7:00 a 15:00 hs</span>
-                            </article>
+                            </article> -->
+                            <img src="./img/EMAIL.png" alt="">
+                            <!-- <article class="fondo-grisa padd-xy-1em br-1em">
+                                <span  style="height: 0px;">
+                                    consulta@seprelad.gov.py
+                                </span>
+                            </article> -->
+                            <img src="./img/HORARIO.png" alt="">
+                           <!--  <article class="fondo-grisa padd-xy-1em br-1em">
+                                <span  style="height: 0px;">Lunes a Viernes: 7:00 a 15:00 hs</span>
+                            </article> -->
                         </section>
                     </div>
                 </section>
 
 
+            </div>
+
+            <div class="content-wrap1 notopadding">
+                <div class="container clearfix">
+                    <h3 class="title-10-em text-azul mb-0">AUTORIDADES
+                    </h3>
+                    <br>
+                    <section class="up-1200px">
+                        <img src="./img/autoridadespng.png" style="width: 100%;">
+                    </section>
+                    <section class="down-1200px">
+                        <img src="./img/rojo1.png" style="width: 100%;">
+                        <img src="./img/azul2.png" style="width: 100%;">
+                    </section>
+                </div>
+                <div class="container clearfix">
+                    <h3 class="title-10-em text-azul mb-0">ESTRUCTURA ORGANIZACIONAL
+                    </h3>
+                    <br>
+                    <section>
+                        <img src="./img/ORGS.png" style="width: 100%;">
+                    </section>
+                </div>
             </div>
 
             <div class="content-wrap1 notoppadding">
@@ -785,9 +906,32 @@
                                     EPORANDÚ <br>
                                     PREGUNTAS FRECUENTES
                                 </h3>
-                                <p class="text-rojo">
-                                    FALTAN DATOS DE SEPRELAD
-                                </p>
+                                <ol>
+                                    <li>
+                                        ¿Cuáles son los requisitos para la inscripción?
+                                    </li> 
+                                    <li>
+                                        ¿Quiero hacer el seguimiento de mi solicitud y saber porque no me envían mi registro aún?
+                                    </li> 
+                                    <li>
+                                        ¿Quién es el oficial de cumplimiento, ustedes me pueden decir quien es mi OC?
+                                    </li> 
+                                    <li>
+                                        ¿Cuánto es el canon para OSFL?
+                                    </li> 
+                                    <li>
+                                        ¿Cuáles son los requisitos para la inscripción?
+                                    </li> 
+                                    <li>
+                                        ¿Qué es Canon? ¿Qué es arancel?
+                                    </li> 
+                                    <li>
+                                        ¿Qué es SIRO?
+                                    </li> 
+                                    <li>
+                                        ¿Que pasos se deben seguir para enviar informes?
+                                    </li> 
+                                </ol>
                             </div>
                             <div>
                                 <h3 class="text-azul">
@@ -959,33 +1103,146 @@
                     </h3>
                     <section class="grilla-2">
                         <div>
-                            <h3 class="text-azul br-1em borde-negro d-inline-block padd-xy-05em">¿QUÉ ES EL LA/FT/FP?:
-                            </h3>
-                            <p> redactar brevemente <br> FALTAN DATOS DE SEPRELAD
-                            </p>
-                        </div>
-                        <div>
                             <div>
-                                <h3 class="text-azul br-1em borde-negro d-inline-block padd-xy-05em">¿CÓMO PREVENIR EL
-                                    LA/FT/FP?</h3>
-                                <p>Consejos y recomendaciones para que las personas y las empresas puedan prevenir el
-                                    LA/FT
-                                    en su vida cotidiana.</p>
-                                <p>FALTAN DATOS DE SEPRELAD
+                                <h3 class="text-azul br-1em borde-negro d-inline-block padd-xy-05em">¿QUÉ ES EL LA/FT/FP?:
+                                </h3>
+                                <p>Lavado de Activos (LA) El Lavado de Activos es el proceso a través del cual es encubierto el
+                                    origen de los fondos generados mediante el ejercicio de algunas actividades ilegales o
+                                    criminales (por ejemplo narcotráfico, contrabando de armas, corrupción, desfalco, crímenes de
+                                    guante blanco, extorsión, secuestro, piratería etc.). El objetivo de la operación, que
+                                    generalmente se realiza en varios niveles, consiste en hacer que los fondos o activos obtenidos
+                                    a través de actividades ilícitas aparezcan como el fruto de actividades legítimas y circulen sin
+                                    problema en el sistema financiero.
                                 </p>
                             </div>
                             <div>
                                 <h3 class="text-azul br-1em borde-negro d-inline-block padd-xy-05em">ENLACES DE INTERÉS
                                 </h3>
-                                <p>Otras UIFs
-                                    FALTA LISTADO QUE DEBE PASAR SEPRELAD
-                                </p>
-                                <p>Organizaciones relevantes
-                                    FALTA LISTADO QUE DEBE PASAR SEPRELAD</p>
-                                <p>
-                                    Recursos adicionales
-                                    FALTA LISTADO QUE DEBE PASAR SEPRELAD</p>
+                                <ul>
+                                    <li>Presidencia de la República:  <a href="https://www.presidencia.gov.py">https://www.presidencia.gov.py</a></li>
+                                    <li>Ministerio de Hacienda (MH):  <a href="https://www.mef.gov.py">https://www.mef.gov.py</a></li>
+                                    <li>Secretaria Nacional de Administración de Bienes Incautados y Comisados (SENABICO):  <a href="https://www.senabico.gov.py">https://www.senabico.gov.py</a></li>
+                                    <li>Secretaria Nacional Antidrogas (SENAD):  <a href="https://www.senad.gov.py">https://www.senad.gov.py</a></li>
+                                    <li>Secretaria Nacional de Inteligencia (SNI):  <a href="https://www.sni.gov.py">https://www.sni.gov.py</a></li>
+                                    <li>Banco Central del Paraguay (BCP):  <a href="https://www.bcp.gov.py">https://www.bcp.gov.py</a></li>
+                                    <li>Corte Suprema de Justicia (CSJ):  <a href="https://www.pj.gov.py">https://www.pj.gov.py</a></li>
+                                    <li>Ministerio Público (MP): <a href="https://www.ministeriopublico.gov.py">https://www.ministeriopublico.gov.py</a></li>
+                                </ul>
                             </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h3 class="text-azul br-1em borde-negro d-inline-block padd-xy-05em">¿CÓMO PREVENIR EL
+                                    LA/FT/FP?</h3>
+                                <h4>SEÑALES DE ALERTA</h4>
+                                <div class="grilla-2">
+                                    <ul>
+                                        <li>
+
+                                            Incremento de depósitos realizados en un
+                                            periodo específico.
+                                        </li>
+                                        <li>
+
+                                            Inconsistencia entre declaraciones ante la
+                                            administración tributaria y movimientos en el
+                                            sistema financiero.
+                                        </li>
+                                        <li>
+
+                                            Falta de correspondencia entre las
+                                            operaciones y el perfil del cliente.
+                                        </li>
+                                        <li>
+
+                                            Imposibilidad de determinar el origen lícito
+                                            de los fondos.
+                                        </li>
+                                        <li>
+
+                                            Utilización de dinero en efectivo.
+                                        </li>
+                                        <li>
+
+                                            Publicaciones periodísticas negativas.
+                                        </li>
+                                        <li>
+
+                                            Utilización de títulos de crédito emitidos a
+                                            favor de organizaciones.
+                                        </li>
+                                        <li>
+
+                                            Desembolso de sumas de dinero sin
+                                            justificación legal.
+                                        </li>
+                                        <li>
+
+                                            Depósitos realizados en cuentas de
+                                            particulares sin las documentaciones
+                                            respaldatorias correspondientes.
+                                        </li>
+                                        <li>
+
+                                            Movimientos de sumas elevadas de dinero
+                                            por parte de las sociedades constituidas para
+                                            la importación y exportación de vehículos.
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                       <li>
+
+                                           Sociedades constituidas con un capital
+                                           relativamente bajo que se vieron
+                                           incrementadas sustancialmente en un corto
+                                           plazo.
+                                        </li> 
+                                       <li>
+
+                                           Falta de correspondencia entre los montos
+                                           declarados ante la administración tributaria y
+                                           los movimientos de dinero realizados a través
+                                           del sistema financiero.
+                                        </li> 
+                                       <li>
+
+                                           Depósitos realizados en el sistema financiero
+                                           sin justificación suficiente.
+                                        </li> 
+                                       <li>
+
+                                           Suscripción de títulos de crédito sin respaldo
+                                           documental suficiente.
+                                        </li> 
+                                       <li>
+
+                                           Indeterminación de la actividad económica
+                                           que respalde los movimientos financieros.
+                                        </li>
+                                           <li>
+
+                                               Inconsistencia entre los montos remesados
+                                               por medio del sistema financiero y la actividad
+                                               comercial de las personas jurídicas utilizadas
+                                               en la estructura.
+                                            </li> 
+                                       <li>
+
+                                           Movimientos multimillonarios realizados por
+                                           empresas de poca rentabilidad y con actividad
+                                           comercial nula.
+                                        </li> 
+                                       <li>
+
+                                           Falta de correspondencia entre la actividad
+                                           económica de las personas jurídicas y los
+                                           montos canalizados por medio del sistema
+                                           financiero.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
                         </div>
                     </section>
                 </div>
@@ -1023,14 +1280,11 @@
             </div>
             <div class="content-wrap1 notopadding">
                 <div class="container clearfix">
-                    <h3 class="text-azul title-15-em">SEGUIMOS PARA ESTAR AL DÍA</h3>
-                    <div>
-                        <p class="title-15-em"> <img src="./img/Vectores-Tw.png" class="w-64"> TWITTER:
-                            <strong>@SEPRELADUIG</strong> </p>
-                        <p class="title-15-em"> <img src="./img/Vectores-FB.png" class="w-64"> FACEBOOK:
-                            <strong>@SEPRELADUIF</strong> </p>
-                        <p class="title-15-em"> <img src="./img/Vectores-YT.png" class="w-64"> YOUTUBE:
-                            <strong>@UIFSEPRELAD</strong> </p>
+                    <h3 class="text-azul title-15-em">SEGUINOS PARA ESTAR AL DÍA</h3>
+                    <div class="redes-sociales">
+                        <p class="title-15-em"> <img src="./img/Vectores-FB.png" class="w-64">  <strong>@SEPRELADUIF</strong> </p>
+                        <p class="title-15-em"> <img src="./img/Vectores-Tw.png" class="w-64"> <strong>@SEPRELADUIG</strong> </p>
+                        <p class="title-15-em"> <img src="./img/Vectores-YT.png" class="w-64"> <strong>@UIFSEPRELAD</strong> </p>
                     </div>
                 </div>
             </div>

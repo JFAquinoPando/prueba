@@ -4,3 +4,10 @@ ROJO: #E52A26
 GRIS: #585856
 AZUL: #0A549A
 Color del cuadro: #F4F4F4
+
+https://wa.me/595994881822?text=Hola%2Cme%20gustar%C3%ADa%20aprovechar%20el%20precio%20promocional%20del%20paquete%20VIP%20que%20recib%C3%AD%20con%20la%20Consultor%C3%ADa.
+
+
+img:is([sizes="auto" i], [sizes^="auto," i]) {
+    contain-intrinsic-size: 300px 300px;
+}
