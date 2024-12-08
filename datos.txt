@@ -1,3 +1,14 @@
+
+------------------
+
+Datos actualizados:
+AZUL: #0047BA
+ROJO: #E1251B
+GRIS: #3C3C3B
+
+TITULOS: Gotham Roudend bold azul - 21 PX
+OTROS TEXTOS: Roudend book - 17px
+-----------------
 Tipografía: Gotham
 
 ROJO: #E52A26
