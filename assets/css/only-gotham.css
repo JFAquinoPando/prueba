@@ -90,9 +90,9 @@ ol li {
 ol li::before {
   content: counter(item); /* Muestra el contador antes del contenido del <li> */
   font-size: 1em; /* Tamaño del número */
-  color: white; /* Color del número */
+  color: var(--color-azul); /* Color del número */
   font-weight: bold; /* Negrita */
-  background-color: var(--color-rojo);
+  background-color: transparent;
   display: inline-block;
   text-align: center;
   width: 2em;
@@ -270,5 +270,108 @@ section.columns-3-2 {
 @media (min-width: 1400px) {
   .container {
       width: 1360px;
+  }
+}
+
+.tematica {
+  border: 1px solid;
+  border-radius: 3em;
+  padding: 1em;
+  border-color: var(--color-gris);
+  &>p{
+    margin: 0;
+  }
+}
+
+.header-ministerio{
+    display: flex;
+    color: white;
+    gap: 3em;
+    margin-bottom: 1em;
+    align-items: center;
+    &.opc-1{
+      background-image: linear-gradient(90deg, white 100px,var(--color-rojo) 90px,var(--color-rojo));
+    }
+
+    &.opc-2{
+      background-image: linear-gradient(90deg, white 100px,var(--color-azul) 90px,var(--color-azul));
+    }
+
+    img{
+      border: 5px solid white;
+      border-radius: 50%;
+      transform: scale(1.15);
+    }
+    :is(h2,h3,h4){
+      margin-bottom: 0;
+    }
+
+    h2:has(+h4){
+      margin-bottom: 1em;
+    }
+
+    &>div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+}
+
+.text-blanco{
+  color: white;
+}
+
+.header-ministerio {
+  
+  &:is(.opc-1, .opc-2){
+    & + section > article > h3{
+      width: max-content;
+      padding: 0.2em 0.3em;
+      color: white;
+    }
+  }
+  &.opc-1 + section > article > h3{
+    background-color: var(--color-rojo);
+  }
+
+  &.opc-2 + section > article > h3{
+    background-color: var(--color-azul);
+  }
+}
+
+.header-ministerio {
+
+  & + section .contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: flex-start;
+    background-color: #ededed;
+    padding: 2em;
+}
+
+  & + section .contacto div{
+      display: flex;
+      align-items: center;
+      gap: 1em;
+  }
+  & + section .contacto span{
+    color: white;
+    border-radius: 50%;
+    padding: .3em;
+    text-align: center;
+    display: inline-block;
+    svg{
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.opc-1 + section .contacto span{
+    background: var(--color-rojo);
+  }
+  &.opc-2 + section .contacto span{
+    background: var(--color-azul);
   }
 }
