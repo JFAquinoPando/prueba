@@ -264,7 +264,7 @@
                 grid-template-columns: 1fr !important;
 
                 article{
-                    max-width: calc(80% - 25px);
+                   /*  max-width: calc(80% - 25px); */
                     *{
                         word-break: break-word;
                     }
@@ -281,7 +281,7 @@
                 grid-template-columns: 1fr !important;
 
                 article{
-                    max-width: calc(80% - 25px);
+                    /* max-width: calc(80% - 25px); */
                     *{
                         word-break: break-word;
                     }
@@ -753,6 +753,8 @@
                                 const [_,opcion] = usar.classList
                                 console.log(opcion);
                                 $(`section.ocultando:not(.seleccionables):has(.${opcion})`).classList.toggle("altura-cero")
+                                $(`section.seleccionables header.${opcion} img`).classList.toggle("mostrar")
+
                             }
                         })
                     </script>

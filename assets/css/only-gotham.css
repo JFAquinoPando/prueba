@@ -113,6 +113,7 @@ ol li::before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 1em;
 }
 
 .grilla-2-50porc {
@@ -410,10 +411,26 @@ section{
 }
 
 @media (max-width: 768px){
+
+  .header-ministerio{
+    &.opc-1{
+      background-image: linear-gradient(90deg,  var(--color-rojo),var(--color-rojo) 90px,var(--color-rojo));
+      padding-inline: 1em;
+      padding-bottom: 0.5em;
+    }
+
+    &.opc-2{
+      background-image: linear-gradient(90deg, var(--color-azul),var(--color-azul) 90px,var(--color-azul));
+      padding-inline: 1em;
+      padding-bottom: 0.5em;
+    }
+  }
+
   section{
 
     &:not(.seleccionables) header.header-ministerio{
       gap: 1.1em;
+      flex-direction: column;
     }
     &:not(.seleccionables):has(:is(.header-ministerio.opc-1, .header-ministerio.opc-2)){
       h2{
@@ -421,6 +438,10 @@ section{
       }
     }
   }
+}
+
+a{
+    word-break: break-word;
 }
 
 @keyframes latir {
