@@ -743,8 +743,36 @@
                             AUTORIDADES
                         </span>
                     </h3>
-                    <br>
-                    <section>
+                    <script type="module">
+                        const $ = (s) => document.querySelector(s)
+                        $(".seleccionables").addEventListener("click", (e) => {
+                            const d1 = e.target.closest(".header-ministerio")
+                            let usar = d1 ?? (d1.classList.contains("opc-1") || d1.classList.contains("opc-2"))
+                            if (usar) {
+                                console.log({usar});
+                                const [_,opcion] = usar.classList
+                                console.log(opcion);
+                                $(`section.ocultando:not(.seleccionables):has(.${opcion})`).classList.toggle("altura-cero")
+                            }
+                        })
+                    </script>
+                    <section class="grilla-2 seleccionables">
+                        <header class="header-ministerio opc-1">
+                            <img src="./ministra-1.png" alt="">
+                            <div>
+                                <h2 class="text-blanco text-uppercase">Liliana Alcaraz</h2>
+                                <h4 class="text-blanco text-uppercase">Ministra - Secretaria Ejecutiva de la SEPRELAD</h4>
+                            </div>
+                        </header>
+                        <header class="header-ministerio opc-2">
+                            <img src="./vice-ministro-1.png" alt="">
+                            <div>
+                                <h2 class="text-blanco text-uppercase">Pablo Rojas</h2>
+                                <h4 class="text-blanco text-uppercase">Viceministro - Secretario Adjunto de la SEPRELAD</h4>
+                            </div>
+                        </header>
+                    </section>
+                    <section class="ocultando">
                         <header class="header-ministerio opc-1">
                             <img src="./ministra-1.png" alt="">
                             <div>
@@ -849,7 +877,7 @@
                         </section>
                     </section>
                     
-                    <section>
+                    <section class="ocultando">
                         <header class="header-ministerio opc-2">
                             <img src="./vice-ministro-1.png" alt="">
                             <div>
@@ -1063,7 +1091,7 @@
             </section>
 
             <div class="container clearfix">
-                <h1 class="title-text text-azul"><span class="clase2 text-center">
+                <h1 class="title-text text-azul"><span class="clase2 text-center text-uppercase">
                     Espacio anticorrupción
                 </span>
                 </h1>
@@ -1076,7 +1104,10 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen=""></iframe>
                         <div>
-                            <img src="./img/Vectores-Denunciar aqui.png" alt="">
+                            <!-- <img src="./img/Vectores-Denunciar aqui.png" alt=""> -->
+                            <div class="text-center"><button href="https://denuncias.gov.py/login" type="button" title="Acceder al Sistema de Seguimiento" icon="icon-arrow-right-circle" label="Acceder al SSPS" class="btn btn-primary ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
+                                Denunciar aquí
+                            </button></div>
                         </div>
                     </div>
                     <div>

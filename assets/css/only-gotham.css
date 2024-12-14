@@ -57,6 +57,7 @@ body {
 
 .title-text{
   font-size: var(--size-title);
+  margin-block: var(--size-title);
 }
 
 .other-text{
@@ -88,7 +89,7 @@ ol li {
 }
 
 ol li::before {
-  content: counter(item); /* Muestra el contador antes del contenido del <li> */
+  content: counter(item) ". "; /* Muestra el contador antes del contenido del <li> */
   font-size: 1em; /* Tamaño del número */
   color: var(--color-azul); /* Color del número */
   font-weight: bold; /* Negrita */
@@ -373,5 +374,63 @@ section.columns-3-2 {
   }
   &.opc-2 + section .contacto span{
     background: var(--color-azul);
+  }
+}
+
+.seleccionables{
+  .header-ministerio{
+    gap: 0.6em;
+
+    h2{
+      font-size: var(--size-title);
+    }
+    img{
+      animation: latir 2s ease-in-out infinite;
+    }
+    img:not(.mostrar){
+      animation-play-state: running;
+    }
+    img.mostrar{
+      animation-play-state: paused;
+    }
+  }
+}
+
+section{
+  &:not(.seleccionables):has(:is(.header-ministerio.opc-1, .header-ministerio.opc-2))
+  {
+    /* background-color: black; */
+    transition: height .6s, opacity 0.7s;
+  }
+}
+
+.altura-cero{
+  height: 0px;
+  opacity: 0;
+}
+
+@media (max-width: 768px){
+  section{
+
+    &:not(.seleccionables) header.header-ministerio{
+      gap: 1.1em;
+    }
+    &:not(.seleccionables):has(:is(.header-ministerio.opc-1, .header-ministerio.opc-2)){
+      h2{
+        font-size: var(--size-title);
+      }
+    }
+  }
+}
+
+@keyframes latir {
+  0%  {
+    transform: scale(0.97);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100%{
+    transform: scale(0.97);
   }
 }
