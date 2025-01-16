@@ -1,0 +1,288 @@
+.fluid-width-video-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.fluid-width-video-wrapper iframe,
+.fluid-width-video-wrapper object,
+.fluid-width-video-wrapper embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Feature Box - Background
+-----------------------------------------------------------------*/
+
+.feature-box.fbox-bg.fbox-center {
+    margin-top: 68px;
+    padding: 68px 30px 30px;
+    background-color: #FFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 5px;
+}
+
+.feature-box.fbox-bg.fbox-center:first-child {
+    margin-top: 48px;
+}
+
+.feature-box.fbox-bg.fbox-center.fbox-large {
+    margin-top: 84px;
+    padding-top: 84px;
+}
+
+.feature-box.fbox-bg.fbox-center.fbox-large:first-child {
+    margin-top: 64px;
+}
+
+.feature-box.fbox-bg.fbox-center .fbox-icon {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    margin: 0 0 0 -48px;
+}
+
+.feature-box.fbox-bg.fbox-center.fbox-large .fbox-icon {
+    top: -64px;
+    left: 50%;
+    margin-left: -64px;
+}
+
+.feature-box.fbox-bg.fbox-center.fbox-plain .fbox-icon,
+.feature-box.fbox-bg.fbox-center.fbox-border .fbox-icon,
+.feature-box.fbox-bg.fbox-center.fbox-outline .fbox-icon {
+    background-color: #FFF;
+}
+
+.feature-box h3 span.subtitle {
+    display: block;
+    margin-top: 5px;
+    color: #444;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.feature-box.fbox-center {
+    text-align: center;
+}
+
+
+/* Agregar iconos */
+
+/*! CSS Used from: https://www.seprelad.gov.py/assets/css/bootstrap.css */
+@media print {
+
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*! CSS Used from: https://www.seprelad.gov.py/assets/css/style.css */
+::selection {
+    background: #1ABC9C;
+    color: #FFF;
+    text-shadow: none;
+}
+
+:active,
+:focus {
+    outline: none !important;
+}
+
+.feature-box .fbox-icon i {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+}
+
+.feature-box .fbox-icon i {
+    border-radius: 50%;
+    background-color: #1ABC9C;
+}
+
+.feature-box .fbox-icon i {
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    line-height: 64px;
+}
+
+.feature-box.fbox-plain .fbox-icon i {
+    border: none !important;
+    background-color: transparent !important;
+    color: #1ABC9C;
+    border-radius: 0;
+}
+
+.feature-box.fbox-plain .fbox-icon i {
+    font-size: 48px;
+    line-height: 1 !important;
+}
+
+.feature-box.fbox-center .fbox-icon i {
+    font-size: 42px;
+    line-height: 96px;
+}
+
+.feature-box.fbox-center.fbox-plain .fbox-icon i {
+    font-size: 84px;
+}
+
+/*! CSS Used from: https://www.seprelad.gov.py/assets/css/font-icons.css */
+[class^="icon-"] {
+    display: inline-block;
+    font-family: 'font-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone3:before {
+    content: "\e748";
+}
+
+/*! CSS Used from: https://www.seprelad.gov.py/assets/css/colors.css */
+::selection {
+    background: #F18052;
+}
+
+.feature-box.fbox-plain .fbox-icon i {
+    color: #F18052;
+}
+
+.feature-box .fbox-icon i {
+    background-color: #F18052;
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: 'font-icons';
+    src: url('https://www.seprelad.gov.py/assets/css/fonts/font-icons.eot');
+    src: url('https://www.seprelad.gov.py/assets/css/fonts/font-icons.eot') format('embedded-opentype'), url('https://www.seprelad.gov.py/assets/css/fonts/font-icons.woff') format('woff'), url('https://www.seprelad.gov.py/assets/css/fonts/font-icons.ttf') format('truetype'), url('https://www.seprelad.gov.py/assets/css/fonts/font-icons.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.contactos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    justify-items: end;
+}
+
+.redes-sociales{
+    display: grid;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 768px){
+
+    .redes-sociales{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grilla-2-50porc{
+        grid-template-columns: 1fr !important;
+
+        article{
+           /*  max-width: calc(80% - 25px); */
+            *{
+                word-break: break-word;
+            }
+        }
+    }
+
+    section.columns-3-2{
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .grilla-2-50porc{
+        grid-template-columns: 1fr !important;
+
+        article{
+            /* max-width: calc(80% - 25px); */
+            *{
+                word-break: break-word;
+            }
+        }
+    }
+
+    section.columns-3-2{
+        grid-template-columns: 1fr !important;
+    }
+
+    .grilla-4,.contactos-grid{
+        grid-template-columns: 1fr !important
+    }
+
+    .fondo-grisa.br-1em.padd-xy-1em{
+        width: 100%;
+        word-break: break-word;
+    }
+}
+
+article {
+    word-break: break-word;
+}
+
+@media screen and (min-width: 1200px){
+    .up-1200px{
+        display: block;
+    }
+    .down-1200px{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1199px){
+    .up-1200px{
+        display: none;
+    }
+    .down-1200px{
+        display: block;
+    }
+}
+
+button.btn.btn-primary.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left {
+background-color: crimson;
+color: white;
+font-weight: 600;
+font-size: 1.5em;
+}
