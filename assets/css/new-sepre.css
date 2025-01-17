@@ -29,6 +29,10 @@
   margin-top: 4em;
 }
 
+.mt-0{
+  margin-top: 0px !important;
+}
+
 .mb-0 {
   margin-bottom: 0;
 }
@@ -110,6 +114,10 @@ ol li::before {
   margin-right: 10px; /* Espacio entre el número y el texto */
 }
 
+.d-grid{
+  display: grid;
+}
+
 .grilla-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -139,6 +147,11 @@ ol li::before {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2em;
+}
+
+.grilla-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .padd-xy-1em {
@@ -299,11 +312,11 @@ section.columns-3-2 {
     margin-bottom: 1em;
     align-items: center;
     &.opc-1{
-      background-image: linear-gradient(90deg, white 100px,var(--color-rojo) 90px,var(--color-rojo));
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 100px,var(--color-rojo) 90px,var(--color-rojo));
     }
 
     &.opc-2{
-      background-image: linear-gradient(90deg, white 100px,var(--color-azul) 90px,var(--color-azul));
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 100px,var(--color-azul) 90px,var(--color-azul));
     }
 
     img{
@@ -439,6 +452,106 @@ section{
   font-weight: 800 !important;
 }
 
+.w33{
+  width: 33%;
+}
+
+.d-flex{
+  display: flex ;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.gap-1{
+  gap: 1em;
+}
+
+.my-0{
+  margin-block: 0;
+}
+
+.fs-60-device{
+  font-size: 60px;
+}
+
+.fs-20{
+  font-size: var(--size-20);
+}
+.fs-19{
+  font-size: var(--size-19);
+}
+.fs-15{
+  font-size: var(--size-15);
+}
+.fs-14{
+  font-size: var(--size-14);
+}
+
+.text-wrap-balance{
+  text-wrap: balance;
+}
+
+.logo-justicia{
+  max-width: 200px;
+  width: 33%;
+  min-width: 100px;
+}
+
+.w-100{
+  width: 100% !important;
+}
+
+.w-180px{
+  width: 180px !important;
+}
+
+.max-contenedor{
+  width: 70%;
+}
+
+.fondo-gris-oscuro{
+  background-color: var(--color-crema-oscuro);
+  border-left: var(--color-rojo) 10px solid;
+  padding: 6px;
+}
+
+.sec-sidebar{
+  .cuadros {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: start;
+    gap: 1em;
+    &.centrar{
+      align-items: center;
+    }
+  }
+}
+
+.justify-space-center{
+  justify-content: center;
+}
+
+.grilla-2-40-60{
+  display: grid;
+  gap: 0;
+  grid-template-columns: 4fr 6fr;
+}
+
+.fondo-transparente{
+  background-color: transparent !important;
+}
+
+.h36 {
+  line-height: 36px;
+  height: 46px;
+}
+
+.mt-1{
+  margin-top: 1em;
+}
+
 .secciones-principal{
   display: flex;
   gap: 40px;
@@ -452,6 +565,8 @@ section{
   .fondo-grisa{
     border-bottom: 3px solid var(--color-crema-oscuro);
   }
+
+  
 
   ol > li, ul > li {
     padding-bottom: 0 !important;
@@ -483,11 +598,18 @@ section{
       font-weight: bold;
       padding-block: 0.5em;
       height: 4lh;
+      text-wrap: balance;
   }
 
     img{
       width: 70%;
     }
+}
+
+.ocultando {
+  .grilla-2 article{
+    justify-items: baseline;
+  }
 }
 
   .grilla-3 {
@@ -517,18 +639,7 @@ section{
   }
 
 
-  .fs-20{
-    font-size: var(--size-20);
-  }
-  .fs-19{
-    font-size: var(--size-19);
-  }
-  .fs-15{
-    font-size: var(--size-15);
-  }
-  .fs-14{
-    font-size: var(--size-14);
-  }
+
 
   .d-flex{
     display: flex;
@@ -540,6 +651,13 @@ section{
   .py-40px{
     padding-block: 40px;
   }
+
+  
+  .py-10px{
+    padding-block: 10px;
+  }
+
+  
 
   .mb-10px{
     margin-bottom: 10px;
@@ -588,8 +706,57 @@ section{
 
 }
 
+@media screen and (max-width: 1280px) {
+  .secciones-nuevas .d-flex:has(img) {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .secciones-principal {
+    .sec-principal {
+        width: calc(100% - 2px);
+    }
+}
+}
 
 @media (max-width: 768px){
+
+  .w33{
+    width: 80%;
+  }
+
+  .fs-60-device{
+    font-size: 36px;
+  }
+
+  .secciones-principal{
+    .grilla-2, .grilla-3{
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  .grilla-2, .grilla-3, .grilla-datos, .grilla-datos article, .grilla-2-40-60, .grilla-5{
+    grid-template-columns: 1fr !important;
+  }
+
+  .secciones-nuevas .d-flex , #rendicion-cuenta, .secciones-principal{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .secciones-nuevas .d-flex{
+    align-items: center !important;
+  }
+
+  .secciones-principal {
+    .sec-principal {
+        flex-direction: column !important;
+    }
+}
 
   .header-ministerio{
     &.opc-1{
