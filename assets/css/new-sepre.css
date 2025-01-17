@@ -235,6 +235,13 @@ section.columns-3-2 {
     
 }
 
+
+.centrar-bloques {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .d-none{
     display: none !important;
 }
@@ -556,6 +563,10 @@ section{
   justify-content: center;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
 .grilla-2-40-60{
   display: grid;
   gap: 0;
@@ -698,6 +709,14 @@ section{
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 
+    p{
+      margin-bottom: 10px;
+    }
+
+    .centrar-bloques{
+      padding-inline: 20px;
+    }
+
     article{
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -706,6 +725,7 @@ section{
       border-radius: 3em;
       padding: 0.5em;
       gap: 1em;
+      min-height: 280px;
       &>div{
         height: 100%;
       }
