@@ -102,12 +102,12 @@ ol li {
   counter-increment: item; /* Incrementa el contador */
   padding-bottom: 0.5em;
 }
-
+/* 
 ol li::before {
-  content: counter(item) ". "; /* Muestra el contador antes del contenido del <li> */
-  font-size: 1em; /* Tamaño del número */
-  color: var(--color-azul); /* Color del número */
-  font-weight: bold; /* Negrita */
+  content: counter(item) ". ";
+  font-size: 1em;
+  color: var(--color-azul);
+  font-weight: bold; 
   background-color: transparent;
   display: inline-block;
   text-align: center;
@@ -115,7 +115,26 @@ ol li::before {
   height: 2em;
   line-height: 2em;
   border-radius: 50%;
-  margin-right: 10px; /* Espacio entre el número y el texto */
+  margin-right: 10px; 
+} */
+
+ol li::before {
+  content: counter(item) ". ";
+  font-size: 1em;
+  color: var(--color-azul);
+  font-weight: bold;
+  background-color: transparent;
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+  height: 2em;
+  line-height: 2em;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+div#lite-1 + div .grilla-2 ol li {
+  text-align: justify !important;
 }
 
 .d-grid{
@@ -628,6 +647,9 @@ section{
     }
     img{
       width: 70%;
+      &.w-50{
+        width: 50%;
+      }
     }
 }
 
@@ -678,11 +700,12 @@ section{
 
     article{
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 3fr;
       align-items: center;
       border: 2px solid var(--color-gris);
       border-radius: 3em;
       padding: 0.5em;
+      gap: 1em;
       &>div{
         height: 100%;
       }
